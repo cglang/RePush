@@ -32,5 +32,10 @@ namespace RePush
 
             return datas;
         }
+
+        public void Close()
+        {
+            write.Close();
+        }
     }
 }

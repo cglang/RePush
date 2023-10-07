@@ -56,9 +56,10 @@ namespace RePush
 
             if (!Directory.Exists("finish"))
                 Directory.CreateDirectory("finish");
-            File.Move(option.Input, Path.Combine("finish", $"data.{DateTime.Now:MMdd-HHmmss}.txt"));
 
             Console.WriteLine("全部已完成");
+
+            logger.Close();
 
             Console.ReadKey();
         }
